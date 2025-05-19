@@ -43,7 +43,8 @@ app.use("/api/v1/genre", genreRoutes);
 app.use("/api/v1/movies", movieRoutes);
 
 const __dirname = path.resolve();
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use("/api/v1/upload", uploadRoutes);
 
 app.listen(port, () => {

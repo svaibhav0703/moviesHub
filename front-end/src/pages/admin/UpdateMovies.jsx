@@ -79,6 +79,7 @@ const UpdateMovies = () => {
           image: uploadedImagePath.toString(),
         },
       }).unwrap();
+      toast.success("movie updated");
       navigate("/movies");
     } catch (error) {
       console.log("not updated error:", error);

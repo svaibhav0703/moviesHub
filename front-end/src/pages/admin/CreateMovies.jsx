@@ -64,7 +64,7 @@ const CreateMovie = () => {
         toast.error("choose a genre");
         return;
       }
-
+      console.log(uploadedimagePath);
       /* console.log("TOKEN FROM REDUX:", userInfo?.token); */
       await createMovie({
         movieName,
@@ -74,6 +74,7 @@ const CreateMovie = () => {
         detail,
         cast,
       }).unwrap();
+      toast.success("movie created");
       navigate("/admin/movies-list");
     } catch (error) {
       console.log("threre is an error", error.data);
