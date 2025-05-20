@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       // allows avoiding CORS error
-      "/api/": "http://localhost:3000",
-      "/uploads": "http://localhost:3000",
+      "/api/": "https://movieshub-ivub.onrender.com",
+      "/uploads": "https://movieshub-ivub.onrender.com",
     },
   },
 });

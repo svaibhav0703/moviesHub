@@ -52,7 +52,7 @@ router.post("/", (req, res) => {
     } else if (req.file) {
       res.status(200).json({
         message: "image uploaded succesfully",
-        image: `http://localhost:3000/uploads/${req.file.filename}`,
+        image: `https://movieshub-ivub.onrender.com/uploads/${req.file.filename}`,
       });
     } else {
       res.status(400).json({ message: "no image found" });
