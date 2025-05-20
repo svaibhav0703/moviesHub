@@ -35,6 +35,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.send("MoviesHub backend is live!");
+});
+
 app.use("/api/v1/users", userRoutes);
 
 import genreRoutes from "./genreRoutes.js";
